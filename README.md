@@ -57,11 +57,11 @@ These are associations in one dataset, not proof of cause.
 [`Customer Churn Analysis and Prediction.pbix`](<Customer Churn Analysis and Prediction.pbix>) has two pages:
 
 - **Overview:** churn rate, total and churned customers, churn split, gender, dependents, partner status, tenure distribution.
-- **Drill-down:** churn by contract type, payment method and internet service, monthly charges by tenure, with gender, contract and internet service slicers.
+- **Drill-down:** churn rate by contract type, payment method and internet service, monthly charges by tenure, with gender, contract and internet service slicers.
 
-<img width="1316" height="733" alt="Customer churn dashboard, overview page" src="https://github.com/user-attachments/assets/55c6ccfa-f641-4846-bdcd-4bb8dbf5a61a" />
+![Overview page](Dashboard/churn_overview.png)
 
-<img width="1317" height="738" alt="Customer churn dashboard, drill-down page" src="https://github.com/user-attachments/assets/1ffb297d-9ed6-4015-885b-94fab1d31bcb" />
+![Drill-down page](Dashboard/churn_drilldown.png)
 
 ## Tools
 
