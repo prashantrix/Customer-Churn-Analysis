@@ -54,7 +54,7 @@ These are associations in one dataset, not proof of cause.
 
 ## Dashboard
 
-[`Customer Churn Analysis and Prediction.pbix`](<Customer Churn Analysis and Prediction.pbix>) has two pages:
+[`Customer Churn Analysis.pbix`](<Customer Churn Analysis.pbix>) has two pages:
 
 - **Overview:** churn rate, total and churned customers, churn split, gender, dependents, partner status, tenure distribution.
 - **Drill-down:** churn rate by contract type, payment method and internet service, monthly charges by tenure, with gender, contract and internet service slicers.
