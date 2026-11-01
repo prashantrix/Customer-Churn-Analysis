@@ -1,90 +1,72 @@
-# **📊 Customer Churn Analysis Dashboard**
+# Customer Churn Analysis
 
-A data-driven deep dive into customer behavior, churn patterns, and retention insights — built with ruthless clarity and zero sugarcoating.
+Power BI dashboard on telecom customer churn: who leaves, and which customer segments carry the highest churn rates.
 
-## 🚀 Overview
+This is a descriptive analysis. It measures and visualizes churn; it does not build a predictive model.
 
-This project analyzes customer churn patterns using a telecom dataset of 7,043 customers.
-The goal was simple: expose the truth behind why customers leave and visualize the patterns through powerful dashboards.
+## Data
 
-The dashboard highlights:
+The widely used public *Telco Customer Churn* dataset, included here as [`Telco_Customer_Churn_Dataset  (2).csv`](<Telco_Customer_Churn_Dataset  (2).csv>): 7,043 customers, 21 columns (demographics, services, contract, billing, tenure, churn flag).
 
-📉 Overall churn rate
+Data checks:
 
-🧾 Contract-type churn comparison
+- 0 duplicate `customerID` values, 0 null cells.
+- 11 customers have a blank `TotalCharges`. All 11 have tenure 0 (brand-new customers), and none churned.
 
-💳 Payment method risk levels
+## Key findings
 
-⏳ Tenure-driven churn patterns
+Overall churn is **26.54%** (1,869 of 7,043 customers). Rates below are churned customers divided by customers in the segment.
 
-🌐 Internet service churn differences
+| Segment | Customers | Churn rate |
+|---|---|---|
+| Month-to-month contract | 3,875 | **42.71%** |
+| One-year contract | 1,473 | 11.27% |
+| Two-year contract | 1,695 | 2.83% |
+| Electronic check | 2,365 | **45.29%** |
+| Mailed check | 1,612 | 19.11% |
+| Bank transfer (automatic) | 1,544 | 16.71% |
+| Credit card (automatic) | 1,522 | 15.24% |
+| Fiber optic internet | 3,096 | **41.89%** |
+| DSL internet | 2,421 | 18.96% |
+| No internet service | 1,526 | 7.40% |
+| Tenure 0-12 months | 2,186 | **47.44%** |
+| Tenure 13-24 months | 1,024 | 28.71% |
+| Tenure 25-48 months | 1,594 | 20.39% |
+| Tenure 49-72 months | 2,239 | 9.51% |
 
-👤 Demographic & behavioral segmentation
+What stands out:
 
-💵 Monthly charge vs. tenure impact
+- **Contract type** separates churn most sharply: month-to-month customers churn at about 15 times the two-year rate.
+- **Month-to-month and electronic check together:** 994 of 1,850 customers (53.73%) churned.
+- **Fiber optic customers pay more and churn more.** Average monthly charge is 91.50 for fiber against 58.10 for DSL. Churned customers paid 74.44 on average against 61.27 for retained customers.
+- **Newer customers churn most.** Nearly half of customers in their first 12 months churned.
+- **Gender shows no meaningful difference:** 26.92% for female and 26.16% for male customers.
+- Customers without a partner (32.96% vs 19.66%), without dependents (31.28% vs 15.45%), and senior citizens (41.68% vs 23.61%) churn at higher rates.
 
-The results are uncomfortable but necessary — churn isn’t random.
-It’s predictable.
-And avoidable.
+These are associations in one dataset, not proof of cause.
 
-## 🧠 Key Insights
-🔥 1. Churn Rate: 27%
+## Where I would look first
 
-A massive red flag for any subscription business.
+- Offer incentives to move month-to-month customers onto one-year or two-year contracts.
+- Check why electronic-check customers churn at roughly three times the rate of automatic-payment customers (billing friction, a customer mix effect, or both).
+- Review the fiber optic offer, since it combines the highest prices with high churn.
+- Add onboarding or early-life check-ins for the first 12 months.
 
-🔥 2. Month-to-Month Contracts → Highest Churn
+## Dashboard
 
-Flexibility becomes an escape route when value isn’t delivered.
+[`Customer Churn Analysis and Prediction.pbix`](<Customer Churn Analysis and Prediction.pbix>) has two pages:
 
-🔥 3. Electronic Check = Churn Hotspot
+- **Overview:** churn rate, total and churned customers, churn split, gender, dependents, partner status, tenure distribution.
+- **Drill-down:** churn by contract type, payment method and internet service, monthly charges by tenure, with gender, contract and internet service slicers.
 
-Payment behavior is one of the strongest churn predictors.
+<img width="1316" height="733" alt="Customer churn dashboard, overview page" src="https://github.com/user-attachments/assets/55c6ccfa-f641-4846-bdcd-4bb8dbf5a61a" />
 
-🔥 4. Early Tenure Churn = Failed Value Delivery
+<img width="1317" height="738" alt="Customer churn dashboard, drill-down page" src="https://github.com/user-attachments/assets/1ffb297d-9ed6-4015-885b-94fab1d31bcb" />
 
-If customers leave early, expectation ≠ experience.
+## Tools
 
-🔥 5. Fiber Users Pay More… and Churn More
+Power BI, Excel.
 
-Premium service does not guarantee premium loyalty.
+## Author
 
-🔥 6. Gender Doesn’t Matter — Behavior Does
-
-Patterns, not demographics, reveal the real story.
-
-## 🛠️ Tech Stack
-
-Excel
-
-Power BI 
-
-
-## 📊 Dashboard Preview
-<img width="1316" height="733" alt="Screenshot 2025-12-02 144447" src="https://github.com/user-attachments/assets/55c6ccfa-f641-4846-bdcd-4bb8dbf5a61a" />
-
-<img width="1317" height="738" alt="Screenshot 2025-12-02 144506" src="https://github.com/user-attachments/assets/1ffb297d-9ed6-4015-885b-94fab1d31bcb" />
-
-
-## 🧩 Features
-✔️ End-to-end exploration of churn patterns
-✔️ Clear visual breakdown of risk factors
-✔️ Actionable insights for retention strategy
-✔️ Clean, professional, presentation-ready dashboard
-✔️ Perfect for data science portfolios and interviews
-
-
-
-## 💡 Why This Project Matters
-Churn kills businesses silently.
-But churn is predictable — if you bother to look.
-
-This dashboard turns raw data into a story:
-who leaves, why they leave, and what you can do about it.
-
-## 🤝 Contributions
-
-Feedback, forks, and improvements are welcome.
-
-## 📬 Contact
-
-If you want help building dashboards, analytics projects, or churn models, reach out on LinkedIn.
+Prashant Kashyap | [LinkedIn](https://linkedin.com/in/prashantrix) | [GitHub](https://github.com/prashantrix)
