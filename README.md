@@ -2,6 +2,10 @@
 
 Power BI dashboard on telecom customer churn: who leaves, and which customer segments carry the highest churn rates.
 
+**Business question:** which customers leave, and where should a retention team focus first?
+
+**Short answer:** month-to-month customers who pay by electronic check, and customers in their first year. Month-to-month customers churn at 42.71% against 2.83% on two-year contracts, 53.73% of those who are also on electronic check churned, and 47.44% of customers in their first 12 months churned.
+
 This is a descriptive analysis. It measures and visualizes churn; it does not build a predictive model.
 
 ## Data
